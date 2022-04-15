@@ -9,12 +9,12 @@ Output just the absolute difference in salaries.
 
 
 SELECT ABS(
-(SELECT MAX(emp.salary) 
-FROM db_employee emp
-JOIN db_dept dept ON emp.department_id = dept.id
-WHERE dept.department = 'engineering') 
--
-(SELECT MAX(emp.salary) 
-FROM db_employee emp
-JOIN db_dept dept ON emp.department_id = dept.id
-WHERE dept.department = 'marketing')) 
+  (SELECT MAX(emp.salary) 
+  FROM db_employee emp
+  JOIN db_dept dept ON emp.department_id = dept.id
+  WHERE dept.department = 'engineering') 
+   -
+  (SELECT MAX(emp.salary) 
+  FROM db_employee emp
+  JOIN db_dept dept ON emp.department_id = dept.id
+  WHERE dept.department = 'marketing')) 
