@@ -10,12 +10,16 @@ Assume that each friend request starts by a user sending (i.e., user_id_sender) 
 
 
 WITH sent_req AS (
-SELECT user_id_sender, user_id_receiver, date
+SELECT user_id_sender, 
+       user_id_receiver, 
+       date
 FROM fb_friend_requests 
 WHERE action = 'sent'),
 
 recieved_req AS (
-SELECT user_id_sender, user_id_receiver, date
+SELECT user_id_sender, 
+       user_id_receiver, 
+       date
 FROM fb_friend_requests 
 WHERE action = 'accepted')
 
